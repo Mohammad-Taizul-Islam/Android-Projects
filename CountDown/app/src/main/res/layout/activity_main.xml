@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edit_text_number"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/text_view_coundown"
+        android:hint="Minutes"
+        android:inputType="number"
+        android:maxLength="4"/>
+    <Button
+
+        android:id="@+id/button_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="set"
+        android:layout_toEndOf="@id/edit_text_number"
+        android:layout_alignTop="@id/edit_text_number"/>
+
+    <TextView
+        android:id="@+id/text_view_coundown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="60sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:id="@+id/btn_start_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/text_view_coundown"/>
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_coundown"
+        android:layout_toEndOf="@id/btn_start_pause"
+        android:layout_marginStart="4dp"
+        android:text="RESET"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
+
+</RelativeLayout>
